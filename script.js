@@ -49,9 +49,18 @@ postForm.addEventListener(`submit`, e => {
       favourite: favourite
     };
 
-    controller(API+`/heroes`, `POST`, newPost)
-        .then(data => renderPost(data))
-        .catch(err => console.log(`In catch: ${err}`))
+	 controller(API+ `/heroes`)
+    .then(heroes => {
+        const matchHeros = heroes.filter((heroes) => heroes.name.includes(newPost.name));
+        if (matchHeros.length) {
+        console.log(`Такое имя: ${newPost.name} уже существует!`);
+        } else {
+            controller(API+ `/heroes`, `POST`, newPost)
+            .then(data => renderPost(data))
+            .catch(err => console.log(`In catch: ${err}`));  
+			 }
+        
+    });
 })
 
 const renderPost = post => {
