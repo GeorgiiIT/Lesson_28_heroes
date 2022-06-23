@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson_28_heroes</title>
+	 <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-2 mb-4">
+            <div class="col-12 col-sm-6">
+                <form class="card p-3" id="postForm">
+                    <div class="mb-4">
+                      <label for="postTitle" class="form-label">Name Surname:</label>
+                      <input type="text" class="form-control" id="postTitle">
+                    </div>
+                    <div class="mb-2">
+                        <label for="postCategory" class="form-label">Post category</label>
+                        <select class="form-select" id="postCategory"></select>
+                    </div>
+                    <div class="mb-2 form-check">
+                      <input type="checkbox" class="form-check-input" id="postFavourite">
+                      <label class="form-check-label" for="postFavourite">Favourite</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Hero</button>
+                  </form>
+            </div>
+        	</div>
+          <div class="row" id="postContainer"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
